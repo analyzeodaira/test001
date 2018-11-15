@@ -1,0 +1,301 @@
+# Logfile created on 2018-11-15 11:46:08 +0900 by logger.rb/56815
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 11:46:08 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [f6177052] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [f6177052] Command: /usr/bin/env mkdir -p /tmp
+  INFO [3af4d78b] Running /usr/bin/env #<StringIO:0x0000000003bf5100> /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [3af4d78b] Command: /usr/bin/env #<StringIO:0x0000000003bf5100> /tmp/git-ssh-test001-production-odaira.sh
+  INFO [fa2cb67a] Running /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [fa2cb67a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh
+  INFO [652b6364] Running /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD as ichinoe@192.168.20.196
+ DEBUG [652b6364] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD )
+  INFO [7c4952af] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [7c4952af] Command: /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases
+ DEBUG [2b07ef3c] Running [ -f /var/www/html/ichinoe/github/test001/current/REVISION ] as ichinoe@192.168.20.196
+ DEBUG [2b07ef3c] Command: [ -f /var/www/html/ichinoe/github/test001/current/REVISION ]
+ DEBUG [726b5241] Running /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null as ichinoe@192.168.20.196
+ DEBUG [726b5241] Command: /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null
+ DEBUG [f7a40084] Running [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ] as ichinoe@192.168.20.196
+ DEBUG [f7a40084] Command: [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ]
+  INFO The repository mirror is at /var/www/html/ichinoe/github/test001/repo
+ DEBUG [35d2a76d] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [35d2a76d] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [cb685371] Running /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git as ichinoe@192.168.20.196
+ DEBUG [cb685371] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git )
+  INFO [1c3921a6] Running /usr/bin/env git remote update --prune as ichinoe@192.168.20.196
+ DEBUG [1c3921a6] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [35b43328] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [35b43328] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [35c5a68d] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115024608 as ichinoe@192.168.20.196
+ DEBUG [35c5a68d] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115024608 )
+  INFO [c36412c5] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115024608 as ichinoe@192.168.20.196
+ DEBUG [c36412c5] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115024608 )
+ DEBUG [bb2fa57a] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [bb2fa57a] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+ DEBUG [3b7f6597] Running /usr/bin/env git rev-list --max-count=1 master as ichinoe@192.168.20.196
+ DEBUG [3b7f6597] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cb65ffc7] Running if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115024608; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115024608'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [cb65ffc7] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115024608; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115024608'" 1>&2; false; fi
+  INFO [78d5710e] Running /usr/bin/env echo "" > REVISION as ichinoe@192.168.20.196
+ DEBUG [78d5710e] Command: cd /var/www/html/ichinoe/github/test001/releases/20181115024608 && /usr/bin/env echo "" > REVISION
+  INFO [4967c6dc] Running /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115024608 /var/www/html/ichinoe/github/test001/releases/current as ichinoe@192.168.20.196
+ DEBUG [4967c6dc] Command: /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115024608 /var/www/html/ichinoe/github/test001/releases/current
+  INFO [b7226599] Running /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001 as ichinoe@192.168.20.196
+ DEBUG [b7226599] Command: /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001
+ DEBUG [9294a3a0] Running /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [9294a3a0] Command: /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases
+ DEBUG [f171637b] Running if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [f171637b] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi
+  INFO [2e2188f0] Running /usr/bin/env echo "Branch master (at ) deployed as release 20181115024608 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log as ichinoe@192.168.20.196
+ DEBUG [2e2188f0] Command: cd /var/www/html/ichinoe/github/test001/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20181115024608 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 11:48:27 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [a079b936] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [a079b936] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:10:21 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [3247c616] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [3247c616] Command: /usr/bin/env mkdir -p /tmp
+  INFO [5a857e79] Running /usr/bin/env #<StringIO:0x00000000039928e0> /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [5a857e79] Command: /usr/bin/env #<StringIO:0x00000000039928e0> /tmp/git-ssh-test001-production-odaira.sh
+  INFO [61fcfcd4] Running /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [61fcfcd4] Command: /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh
+  INFO [a51f63d3] Running /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD as ichinoe@192.168.20.196
+ DEBUG [a51f63d3] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD )
+  INFO [3c0e3b3a] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [3c0e3b3a] Command: /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases
+ DEBUG [6178456d] Running [ -f /var/www/html/ichinoe/github/test001/current/REVISION ] as ichinoe@192.168.20.196
+ DEBUG [6178456d] Command: [ -f /var/www/html/ichinoe/github/test001/current/REVISION ]
+ DEBUG [40cdfcbc] Running /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null as ichinoe@192.168.20.196
+ DEBUG [40cdfcbc] Command: /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null
+ DEBUG [648297d2] Running [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ] as ichinoe@192.168.20.196
+ DEBUG [648297d2] Command: [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ]
+  INFO The repository mirror is at /var/www/html/ichinoe/github/test001/repo
+ DEBUG [46f99256] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [46f99256] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [3d2aa5ff] Running /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git as ichinoe@192.168.20.196
+ DEBUG [3d2aa5ff] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git )
+  INFO [01f6264e] Running /usr/bin/env git remote update --prune as ichinoe@192.168.20.196
+ DEBUG [01f6264e] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0388b3b8] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [0388b3b8] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [f112c1bb] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115041021 as ichinoe@192.168.20.196
+ DEBUG [f112c1bb] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115041021 )
+  INFO [d3ab993a] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115041021 as ichinoe@192.168.20.196
+ DEBUG [d3ab993a] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115041021 )
+ DEBUG [83ddd21f] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [83ddd21f] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+ DEBUG [09facf5d] Running /usr/bin/env git rev-list --max-count=1 master as ichinoe@192.168.20.196
+ DEBUG [09facf5d] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3e4dc7e2] Running if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115041021; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115041021'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [3e4dc7e2] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115041021; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115041021'" 1>&2; false; fi
+  INFO [b9ba9412] Running /usr/bin/env echo "" > REVISION as ichinoe@192.168.20.196
+ DEBUG [b9ba9412] Command: cd /var/www/html/ichinoe/github/test001/releases/20181115041021 && /usr/bin/env echo "" > REVISION
+  INFO [50e5f051] Running /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115041021 /var/www/html/ichinoe/github/test001/releases/current as ichinoe@192.168.20.196
+ DEBUG [50e5f051] Command: /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115041021 /var/www/html/ichinoe/github/test001/releases/current
+  INFO [f9fd7787] Running /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001 as ichinoe@192.168.20.196
+ DEBUG [f9fd7787] Command: /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001
+ DEBUG [47607491] Running /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [47607491] Command: /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases
+ DEBUG [e5e2e87f] Running if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [e5e2e87f] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi
+  INFO [7914f5ad] Running /usr/bin/env echo "Branch master (at ) deployed as release 20181115041021 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log as ichinoe@192.168.20.196
+ DEBUG [7914f5ad] Command: cd /var/www/html/ichinoe/github/test001/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20181115041021 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:11:01 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [35e5b377] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [35e5b377] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:37:09 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [74ff6f3b] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [74ff6f3b] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ea807e3c] Running /usr/bin/env #<StringIO:0x0000000003533920> /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [ea807e3c] Command: /usr/bin/env #<StringIO:0x0000000003533920> /tmp/git-ssh-test001-production-odaira.sh
+  INFO [366caa5d] Running /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [366caa5d] Command: /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh
+  INFO [997b77e1] Running /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD as ichinoe@192.168.20.196
+ DEBUG [997b77e1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD )
+  INFO [21303ad2] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [21303ad2] Command: /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases
+ DEBUG [214c7d8d] Running [ -f /var/www/html/ichinoe/github/test001/current/REVISION ] as ichinoe@192.168.20.196
+ DEBUG [214c7d8d] Command: [ -f /var/www/html/ichinoe/github/test001/current/REVISION ]
+ DEBUG [88cdca44] Running /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null as ichinoe@192.168.20.196
+ DEBUG [88cdca44] Command: /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null
+ DEBUG [f568a1af] Running [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ] as ichinoe@192.168.20.196
+ DEBUG [f568a1af] Command: [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ]
+  INFO The repository mirror is at /var/www/html/ichinoe/github/test001/repo
+ DEBUG [83964642] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [83964642] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [0cac3ebf] Running /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git as ichinoe@192.168.20.196
+ DEBUG [0cac3ebf] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git )
+  INFO [be81fec4] Running /usr/bin/env git remote update --prune as ichinoe@192.168.20.196
+ DEBUG [be81fec4] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [8d1b1f86] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [8d1b1f86] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [722198ec] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115043709 as ichinoe@192.168.20.196
+ DEBUG [722198ec] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115043709 )
+  INFO [e77927ab] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115043709 as ichinoe@192.168.20.196
+ DEBUG [e77927ab] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115043709 )
+ DEBUG [fc380458] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [fc380458] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+ DEBUG [7f4d6b30] Running /usr/bin/env git rev-list --max-count=1 master as ichinoe@192.168.20.196
+ DEBUG [7f4d6b30] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [96dd6c44] Running if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115043709; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115043709'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [96dd6c44] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115043709; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115043709'" 1>&2; false; fi
+  INFO [ca96a2c4] Running /usr/bin/env echo "" > REVISION as ichinoe@192.168.20.196
+ DEBUG [ca96a2c4] Command: cd /var/www/html/ichinoe/github/test001/releases/20181115043709 && /usr/bin/env echo "" > REVISION
+  INFO [137e9aa0] Running /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115043709 /var/www/html/ichinoe/github/test001/releases/current as ichinoe@192.168.20.196
+ DEBUG [137e9aa0] Command: /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115043709 /var/www/html/ichinoe/github/test001/releases/current
+  INFO [4c1f2df9] Running /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001 as ichinoe@192.168.20.196
+ DEBUG [4c1f2df9] Command: /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001
+ DEBUG [548e56c0] Running /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [548e56c0] Command: /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases
+ DEBUG [59129d36] Running if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [59129d36] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi
+  INFO [b487b7ba] Running /usr/bin/env echo "Branch master (at ) deployed as release 20181115043709 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log as ichinoe@192.168.20.196
+ DEBUG [b487b7ba] Command: cd /var/www/html/ichinoe/github/test001/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20181115043709 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:37:15 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [451b9e6f] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [451b9e6f] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:50:13 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [0953a27e] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [0953a27e] Command: /usr/bin/env mkdir -p /tmp
+  INFO [a539d01e] Running /usr/bin/env #<StringIO:0x0000000003b26b20> /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [a539d01e] Command: /usr/bin/env #<StringIO:0x0000000003b26b20> /tmp/git-ssh-test001-production-odaira.sh
+  INFO [e1b779d1] Running /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [e1b779d1] Command: /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh
+  INFO [7040764e] Running /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD as ichinoe@192.168.20.196
+ DEBUG [7040764e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD )
+  INFO [4a8ff176] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [4a8ff176] Command: /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases
+ DEBUG [e4ccc4cf] Running [ -f /var/www/html/ichinoe/github/test001/current/REVISION ] as ichinoe@192.168.20.196
+ DEBUG [e4ccc4cf] Command: [ -f /var/www/html/ichinoe/github/test001/current/REVISION ]
+ DEBUG [3b2d601e] Running /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null as ichinoe@192.168.20.196
+ DEBUG [3b2d601e] Command: /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null
+ DEBUG [0c45402b] Running [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ] as ichinoe@192.168.20.196
+ DEBUG [0c45402b] Command: [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ]
+  INFO The repository mirror is at /var/www/html/ichinoe/github/test001/repo
+ DEBUG [112663aa] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [112663aa] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [e5e0c321] Running /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git as ichinoe@192.168.20.196
+ DEBUG [e5e0c321] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git )
+  INFO [1751d8c9] Running /usr/bin/env git remote update --prune as ichinoe@192.168.20.196
+ DEBUG [1751d8c9] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [59f94f83] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [59f94f83] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [88dd1e63] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115045013 as ichinoe@192.168.20.196
+ DEBUG [88dd1e63] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115045013 )
+  INFO [cc8c7383] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115045013 as ichinoe@192.168.20.196
+ DEBUG [cc8c7383] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115045013 )
+ DEBUG [2cf50eba] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [2cf50eba] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+ DEBUG [d3747ada] Running /usr/bin/env git rev-list --max-count=1 master as ichinoe@192.168.20.196
+ DEBUG [d3747ada] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [cf3df993] Running if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115045013; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115045013'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [cf3df993] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115045013; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115045013'" 1>&2; false; fi
+  INFO [3e5edb24] Running /usr/bin/env echo "" > REVISION as ichinoe@192.168.20.196
+ DEBUG [3e5edb24] Command: cd /var/www/html/ichinoe/github/test001/releases/20181115045013 && /usr/bin/env echo "" > REVISION
+  INFO [ae04d5f3] Running /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115045013 /var/www/html/ichinoe/github/test001/releases/current as ichinoe@192.168.20.196
+ DEBUG [ae04d5f3] Command: /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115045013 /var/www/html/ichinoe/github/test001/releases/current
+  INFO [e680278c] Running /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001 as ichinoe@192.168.20.196
+ DEBUG [e680278c] Command: /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001
+ DEBUG [f1556f32] Running /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [f1556f32] Command: /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases
+ DEBUG [5a1033b1] Running if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [5a1033b1] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi
+  INFO [40a15870] Running /usr/bin/env echo "Branch master (at ) deployed as release 20181115045013 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log as ichinoe@192.168.20.196
+ DEBUG [40a15870] Command: cd /var/www/html/ichinoe/github/test001/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20181115045013 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:50:20 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [c8bb9e1a] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [c8bb9e1a] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:51:15 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e67610b7] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [e67610b7] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:51:52 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [5a61d59c] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [5a61d59c] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:57:46 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d05add29] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [d05add29] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 13:58:40 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e12e6574] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [e12e6574] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 14:11:26 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9f098245] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [9f098245] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 14:12:39 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [1e1c4d74] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [1e1c4d74] Command: /usr/bin/env mkdir -p /tmp
+  INFO ---------------------------------------------------------------------------
+  INFO START 2018-11-15 14:44:07 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [39a7e8ec] Running /usr/bin/env mkdir -p /tmp as ichinoe@192.168.20.196
+ DEBUG [39a7e8ec] Command: /usr/bin/env mkdir -p /tmp
+  INFO [71f3c62e] Running /usr/bin/env #<StringIO:0x00000000039aa760> /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [71f3c62e] Command: /usr/bin/env #<StringIO:0x00000000039aa760> /tmp/git-ssh-test001-production-odaira.sh
+  INFO [e8ef993a] Running /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh as ichinoe@192.168.20.196
+ DEBUG [e8ef993a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-test001-production-odaira.sh
+  INFO [91402ea1] Running /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD as ichinoe@192.168.20.196
+ DEBUG [91402ea1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git ls-remote https://github.com/analyzeodaira/test001.git HEAD )
+  INFO [be65de6b] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [be65de6b] Command: /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/shared /var/www/html/ichinoe/github/test001/releases
+ DEBUG [cf114949] Running [ -f /var/www/html/ichinoe/github/test001/current/REVISION ] as ichinoe@192.168.20.196
+ DEBUG [cf114949] Command: [ -f /var/www/html/ichinoe/github/test001/current/REVISION ]
+ DEBUG [4467fb88] Running /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null as ichinoe@192.168.20.196
+ DEBUG [4467fb88] Command: /usr/bin/env cat /var/www/html/ichinoe/github/test001/current/REVISION 2>/dev/null
+ DEBUG [40ff16e9] Running [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ] as ichinoe@192.168.20.196
+ DEBUG [40ff16e9] Command: [ -f /var/www/html/ichinoe/github/test001/repo/HEAD ]
+  INFO The repository mirror is at /var/www/html/ichinoe/github/test001/repo
+ DEBUG [0abbe0d7] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [0abbe0d7] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [c584ea52] Running /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git as ichinoe@192.168.20.196
+ DEBUG [c584ea52] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote set-url origin https://github.com/analyzeodaira/test001.git )
+  INFO [c6da97a8] Running /usr/bin/env git remote update --prune as ichinoe@192.168.20.196
+ DEBUG [c6da97a8] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [83b7ffc5] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [83b7ffc5] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+  INFO [f81c6b5c] Running /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115054407 as ichinoe@192.168.20.196
+ DEBUG [f81c6b5c] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env mkdir -p /var/www/html/ichinoe/github/test001/releases/20181115054407 )
+  INFO [5da34fd9] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115054407 as ichinoe@192.168.20.196
+ DEBUG [5da34fd9] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/html/ichinoe/github/test001/releases/20181115054407 )
+ DEBUG [814116a8] Running if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [814116a8] Command: if test ! -d /var/www/html/ichinoe/github/test001/repo; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/repo'" 1>&2; false; fi
+ DEBUG [f3d7ca21] Running /usr/bin/env git rev-list --max-count=1 master as ichinoe@192.168.20.196
+ DEBUG [f3d7ca21] Command: cd /var/www/html/ichinoe/github/test001/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-test001-production-odaira.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e2dc11cf] Running if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115054407; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115054407'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [e2dc11cf] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases/20181115054407; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases/20181115054407'" 1>&2; false; fi
+  INFO [4312758d] Running /usr/bin/env echo "" > REVISION as ichinoe@192.168.20.196
+ DEBUG [4312758d] Command: cd /var/www/html/ichinoe/github/test001/releases/20181115054407 && /usr/bin/env echo "" > REVISION
+  INFO [562ded97] Running /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115054407 /var/www/html/ichinoe/github/test001/releases/current as ichinoe@192.168.20.196
+ DEBUG [562ded97] Command: /usr/bin/env ln -s /var/www/html/ichinoe/github/test001/releases/20181115054407 /var/www/html/ichinoe/github/test001/releases/current
+  INFO [70fbbca6] Running /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001 as ichinoe@192.168.20.196
+ DEBUG [70fbbca6] Command: /usr/bin/env mv /var/www/html/ichinoe/github/test001/releases/current /var/www/html/ichinoe/github/test001
+ DEBUG [5b50017d] Running /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases as ichinoe@192.168.20.196
+ DEBUG [5b50017d] Command: /usr/bin/env ls -x /var/www/html/ichinoe/github/test001/releases
+ DEBUG [dd5e956b] Running if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi as ichinoe@192.168.20.196
+ DEBUG [dd5e956b] Command: if test ! -d /var/www/html/ichinoe/github/test001/releases; then echo "Directory does not exist '/var/www/html/ichinoe/github/test001/releases'" 1>&2; false; fi
+  INFO [80b23552] Running /usr/bin/env echo "Branch master (at ) deployed as release 20181115054407 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log as ichinoe@192.168.20.196
+ DEBUG [80b23552] Command: cd /var/www/html/ichinoe/github/test001/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20181115054407 by odaira" >> /var/www/html/ichinoe/github/test001/revisions.log
